@@ -1,40 +1,24 @@
 def get_input_parameters():
-    """
-    Получаем N
-
-    :return: N, например: 14
-    :rtype: int
-    """
-    # TODO: в этой функции пишем весь необходимый код для
-    #  получения входных параметров.
-    #  Логику расчётов тут не программируем
-    pass
-
-
+    num = int(input('Введите число  N : '))
+    return num
 def display_result(odd_numbers):
-    """
-    Выводим список нечётных чисел
-
-    :param odd_numbers: список нечётных чисел, например: [1, 3, 5, 7, 9, 11, 13]
-    :type odd_numbers: List[int]
-    """
+   print('Список из нечётных чисел от 1 до N: ', odd_numbers )
     # TODO: в этой функции пишем весь необходимый код
     #  для вывода результата в нужном формате.
     #  Логику расчётов тут не программируем
-    pass
+    # pass
 
 
 def get_odd_numbers(number):
-    """
-    Получаем отсортированный по возрастанию список
-    нечётных чисел от 1 до number.
+    num_list = []
+    num_resault = []
+    for i in range(1, number + 1):
+        num_list.append(i)
+    for numbers in num_list:
+        if numbers % 2 > 0:
+            num_resault.append(numbers)
+    return num_resault
 
-    :param number: до какого числа нужно рассчитать, например: 14
-    :type number: int
-
-    :return: список нечётных чисел, например: [1, 3, 5, 7, 9, 11, 13]
-    :rtype: List[int]
-    """
     # TODO: в этой функции получаем отсортированный
     #  по возрастанию список нечётных чисел от 1 до number.
     #  print'ов и input'ов тут не должно быть.
