@@ -1,10 +1,6 @@
 def get_input_parameters():
-    """
-    Получаем входное слово
-
-    :return: входное слово, например: "привет"
-    :rtype: str
-    """
+    words = input('Введите слово: ')
+    return words
     # TODO: в этой функции пишем весь необходимый код для
     #  получения входных параметров.
     #  Логику расчётов тут не программируем
@@ -12,12 +8,7 @@ def get_input_parameters():
 
 
 def display_result(number_unique_letters):
-    """
-    Выводим количество уникальных букв в слове
-
-    :param number_unique_letters: количество уникальных букв в слове, например: 6
-    :type number_unique_letters: int
-    """
+    print('Колличество уникальных символов ',number_unique_letters)
     # TODO: в этой функции пишем весь необходимый код
     #  для вывода результата в нужном формате.
     #  Логику расчётов тут не программируем
@@ -25,15 +16,19 @@ def display_result(number_unique_letters):
 
 
 def count_number_unique_letters(word):
-    """
-    Считаем количество уникальных букв в слове.
+    symbol = list(word)
+    unique = 0
+    count = 0
+    for i in symbol:
+        count = 0
+        for n in symbol :
+            if n != i :
+                count += 1
+        if count == len(symbol) - 1 :
+            unique += 1
+    return unique
 
-    :param word: входное слово, например: "привет"
-    :type word: str
 
-    :return: количество уникальных букв в слове, например: 6
-    :rtype: int
-    """
     # TODO: в этой функции пишем логику считаем количество уникальных букв в слове.
     #  print'ов и input'ов тут не должно быть.
     #  Функция на вход принимает ранее полученные данные
