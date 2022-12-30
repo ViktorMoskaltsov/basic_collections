@@ -1,10 +1,12 @@
 def get_input_parameters():
-    """
-    Получаем неотсортированный список чисел
+    num_list = []
+    a = int(input('Введите колличество цифр в сиске :'))
+    for _ in range(a) :
+        print('Ввеите знчение  ', end='')
+        d = int(input())
+        num_list.append(d)
+    return num_list
 
-    :return: неотсортированный список чисел, например: [1, 4, -3, 0, 10]
-    :rtype: List[int]
-    """
     # TODO: в этой функции пишем весь необходимый код для
     #  получения входных параметров.
     #  Логику расчётов тут не программируем
@@ -12,12 +14,8 @@ def get_input_parameters():
 
 
 def display_result(sorted_list):
-    """
-    Выводим отсортированный список
+    print('Отсортировнный список ',sorted_list)
 
-    :param sorted_list: отсортированный список, например: [-3, 0, 1, 4, 10]
-    :type sorted_list: List[int]
-    """
     # TODO: в этой функции пишем весь необходимый код
     #  для вывода результата в нужном формате.
     #  Логику расчётов тут не программируем
@@ -25,15 +23,14 @@ def display_result(sorted_list):
 
 
 def sort_list(original_list):
-    """
-    Сортируем список
+    for i_mn in range(len(original_list)) :
+        for curr in range (i_mn,len(original_list)) :
+            if original_list[curr] < original_list[i_mn]:
+                original_list[curr],original_list[i_mn] = original_list[i_mn],original_list[curr]
 
-    :param original_list: Исходный список: [1, 4, -3, 0, 10]
-    :type original_list: List[int]
 
-    :return: отсортированный, например: [-3, 0, 1, 4, 10]
-    :rtype: List[int]
-    """
+    return original_list
+
     # TODO: в этой функции пишем логику сортировки списка.
     #  print'ов и input'ов тут не должно быть.
     #  Функция на вход принимает ранее полученные данные
